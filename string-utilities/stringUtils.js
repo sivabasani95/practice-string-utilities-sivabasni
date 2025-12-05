@@ -1,17 +1,18 @@
-// to capitalize  the  first letter of string.
-
+// Capitalize the first letter of a string
 export function capitalize(string) {
-if (!string) return " ";
-return string.charAt(0).toUpperCase()+string(1);
+    if (!string) return "";
+    string = string.trim(); // remove extra whitespace
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-// to reverse sting 
-
-export function reverse(sting) {
-return sting.split("").reverse().join("") ;
+// Reverse a string
+export function reverse(string) {
+    if (!string) return "";
+    return string.split("").reverse().join("");
 }
-// check substing is existed in string?
 
-export function contain(substing, str) {
-    return include (substing);
+// Check if substring exists in a string
+export function contain(string, substring) {
+    if (!string || !substring) return false;
+    return string.includes(substring);
 }
